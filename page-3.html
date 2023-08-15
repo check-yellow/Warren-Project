@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/page3.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=family=Kaisei+Tokumin:wght@400;500&display=swap" rel="stylesheet">
+  <title>Page 3</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <a href="./index.html"><img src="./assets/images/bouquet_logo.png" class="logo"></a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./page-2.html">About</a></li>
+          <li><a href="./page-3.html">Seasonal Flowers</a></li>
+          <li><a href="./page-4.html">Shop</a></li>
+          <li><a href="./page-5.html">Blog</a></li>
+          <li><a href="./page-6.html">How To</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <article class="tt-container">
+    <div class="title-container">
+      <h1>Seasonal Flowers</h1>
+    </div>
+    <div class="table-container">
+      <table id="sortable-table">
+        <tr>
+          <th data-column="0">Flower <span class="carat">▽</span></th>
+          <th data-column="1">Peak Season <span class="carat">▽</span></th>
+          <th data-column="2">Type of Flower <span class="carat">▽</span></th>
+          <th data-column="3">Dates of Bloom <span class="carat">▽</span></th>
+        </tr>
+        <tr>
+          <td>Rose</td>
+          <td>Spring and Fall</td>
+          <td>Perennial</td>
+          <td>April to October</td>
+        </tr>
+        <tr>
+          <td>Tulip</td>
+          <td>Spring</td>
+          <td>Perennial</td>
+          <td>March to May</td>
+        </tr>
+        <tr>
+          <td>Daisy</td>
+          <td>Spring and Summer</td>
+          <td>Annual/Perennial</td>
+          <td>April to September</td>
+        </tr>
+        <tr>
+          <td>Lily</td>
+          <td>Summer</td>
+          <td>Perennial</td>
+          <td>June to August</td>
+        </tr>
+        <tr>
+          <td>Sunflower</td>
+          <td>Summer</td>
+          <td>Annual/Perennial</td>
+          <td>July to September</td>
+        </tr>
+        <tr>
+          <td>Daffodil</td>
+          <td>Spring</td>
+          <td>Perennial</td>
+          <td>March to April</td>
+        </tr>
+        <tr>
+          <td>Orchid</td>
+          <td>All Year</td>
+          <td>Perennial</td>
+          <td>Varies depending on species</td>
+        </tr>
+        <tr>
+          <td>Hydrangea</td>
+          <td>Summer</td>
+          <td>Shrub</td>
+          <td>June to October</td>
+        </tr>
+        <tr>
+          <td>Peony</td>
+          <td>Spring and Summer</td>
+          <td>Perennial</td>
+          <td>April to June</td>
+        </tr>
+        <tr>
+          <td>Carnation</td>
+          <td>Spring and Fall</td>
+          <td>Annual/Perennial</td>
+          <td>April to October</td>
+        </tr>
+      </table>
+    </div>
+  </article>
+  <div class="table-image-container">
+    <img src="./assets/images/seasonal-flowers_01.jpg">
+  </div>
+  <footer>
+    <div>
+      <!-- Social Icons -->
+    </div>
+  </footer>
+  <script>
+    function sortTable(column) {
+      const table = document.getElementById("sortable-table");
+      const rows = Array.from(table.rows).slice(1); // Remove header row from the sorting
+      rows.sort((a, b) => {
+        const cellA = a.cells[column].textContent.trim();
+        const cellB = b.cells[column].textContent.trim();
+        return cellA.localeCompare(cellB, undefined, { numeric: true, sensitivity: "base" });
+      });
+
+      // Clear the table body
+      while (table.rows.length > 1) {
+        table.deleteRow(1);
+      }
+
+      // Append the sorted rows back to the table
+      rows.forEach((row) => {
+        table.appendChild(row);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll("th[data-column]");
+      headers.forEach((header) => {
+        header.addEventListener("click", () => {
+          // Reset all carats
+          document.querySelectorAll(".carat").forEach((carat) => carat.textContent = '▽');
+
+          // Change carat for clicked header
+          const carat = header.querySelector(".carat");
+          carat.textContent = '▼';
+
+          const column = header.getAttribute("data-column");
+          sortTable(Number(column));
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/page6.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=family=Kaisei+Tokumin:wght@400;500&display=swap" rel="stylesheet">
+  <title>How To</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <a href="./index.html"><img src="./assets/images/bouquet_logo.png" class="logo"></a>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./page-2.html">About</a>
+          </li>
+          <li>
+            <a href="./page-3.html">Seasonal Flowers</a>
+          </li>
+          <li>
+            <a href="./page-4.html">Shop</a>
+          </li>
+          <li>
+            <a href="./page-5.html">Blog</a>
+          </li>
+          <li>
+            <a href="./page-6.html">How To</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <section>
+      <div class="expert-container">
+        <h1>Becoming the Expert</h1>
+      </div>
+      <div class="top-video">
+        <div class="video">
+          <h2>Keep Your Flowers Fresh Longer</h2>
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/lLgpgD_xZzU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <div class="bottom-video">
+      <div class="video">
+        <h3>Creating a Bouquet</h3>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/o0dH5bCCfG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video">
+        <h3>Caring for Flowers</h3>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/wbTvT4nC1Xo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="accordion-container">
+      <div class="accordion-section">
+        <h4 class="accordion-title">Information <span class="caret">&#9662;</span></h4>
+        <p class="accordion-content">
+          Creating the perfect flower bouquet is an art that melds aesthetics, emotions, and nature's best offerings into a harmonious arrangement...
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra. 
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+        </p>
+      </div>
+      <div class="accordion-section">
+        <h4 class="accordion-title">How To <span class="caret">&#9662;</span></h4>
+        <p class="accordion-content">
+          Hydrangeas are prized for their large, lush blooms, but they can sometimes droop due to various reasons...
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra. 
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+          Fusce interdum sem nulla. Mauris hendrerit orci vel risus facilisis, condimentum vehicula massa pharetra
+        </p>
+      </div>
+    </div>
+    <div class="toTop"><a href="#">To Top</a></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var accordions = document.querySelectorAll('.accordion-section');
+
+        accordions.forEach(function (accordion) {
+          var title = accordion.querySelector('.accordion-title');
+          var content = accordion.querySelector('.accordion-content');
+          var caret = title.querySelector('.caret');
+
+          title.addEventListener('click', function () {
+            var isOpen = content.style.display === 'block';
+
+            // Toggle content visibility
+            content.style.display = isOpen ? 'none' : 'block';
+
+            // Change the caret symbol based on the state
+            caret.innerHTML = isOpen ? '&#9662;' : '&#9652;';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

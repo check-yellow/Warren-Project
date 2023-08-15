@@ -1,0 +1,65 @@
+.shop-container {
+    margin-top: 20rem;
+}
+
+#myCarousel2,
+#myCarousel {
+    width: 40%;
+    align-items: center;
+}
+
+.item img {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.center-car {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.shop-header-container ul li {
+    font-size: 3.25rem !important;
+}
+
+.shop-header-container ul li:first-child {
+    margin-left: 10.1rem !important;
+}
+
+.shop-header-container ul li a:hover {
+    text-decoration: none !important;
+    transform: none !important;
+    color: var(--dblue);
+}
+
+nav {
+    display: flex !important;
+}
+
+.source,
+.flowers {
+    text-align: center;
+    margin: 6rem 0;
+    font-size: 6rem;
+    font-family: var(--bebes);
+    letter-spacing: .25rem;
+}
+
+.scroll-container {
+    max-height: 200px; 
+    overflow-y: scroll; 
+    padding: 2%;
+}
+
+.scroll-container p {
+    font-family: var(--body);
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .shop-header-container ul {
+        margin-top: 5.5rem;
+    }
+}

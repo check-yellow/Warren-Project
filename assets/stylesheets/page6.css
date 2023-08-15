@@ -1,0 +1,75 @@
+
+.expert-container {
+    background: #ccc;
+    text-align: center;
+    margin: 0;
+    padding: 4rem;
+    font-size: 2rem;
+    font-family: var(--bebes);
+    letter-spacing: .25rem;
+}
+
+.top-video {
+    display: flex;
+    justify-content: center;
+}
+
+.video h3,
+.top-video h2 {
+    text-align: center;
+    margin: 3rem 0 2rem;
+    font-family: var(--bebes);
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+}
+
+.bottom-video {
+    display: flex;
+    justify-content: space-around;
+}
+
+.accordion-container {
+    display: flex;
+    justify-content: space-around;
+    background: var(--lblue);
+    height: 400px;
+    margin-top: 3rem;
+}
+
+.accordion-section {
+    width: 35%;
+}
+
+.accordion-content {
+    display: none;
+    font-family: var(--body);
+    margin-top: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.accordion-title {
+    font-size: 2rem;
+    font-family: var(--bebes);
+    letter-spacing: .25rem;
+    user-select: none;
+    margin-bottom: .25rem;
+}
+
+.accordion-title:hover {
+    cursor: pointer;
+    color: var(--dblue);
+}
+
+.toTop {
+    text-align: center;
+    padding: 1rem;
+    background: var(--lblue);
+}
+
+.toTop a {
+    text-decoration: none;
+    font-family: var(--bebes);
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
